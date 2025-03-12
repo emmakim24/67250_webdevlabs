@@ -56,3 +56,4 @@ function findTheBanana2(s){
 var student = {name:"Emma", age: 19};
 console.log(student.name);
 document.getElementById("id").innerHTML = "hi" + student.name + "!";
+//hi3
