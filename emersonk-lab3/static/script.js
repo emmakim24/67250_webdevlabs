@@ -43,12 +43,39 @@ findTheBanana1(L1);
 findTheBanana1(L2);
 
 //step 8
-var count = 0;
-function findTheBanana2(s){
-    if (s == "Banana"){
-        window.alert("We found a banana in array: " + count)
+function findTheBanana2(s) {
+    if(s == "Banana"){
+        window.alert("Found the Banana!");
     }
 }
+L1.forEach(findTheBanana2);
+L2.forEach(findTheBanana2);
+
+//step 9
+function greetingFunc() {
+    var d = new Date(); 
+    var h = d.getHours();
+    var greeting = "";
+
+    if (5 < h && h < 12) {
+        greeting = "Good morning!";
+    } else if (12 < h && h < 18) {
+        greeting = "Good afternoon!";
+    } else if (18 < h && h < 20) {
+        greeting = "Good evening!";
+    } else {
+        greeting = "Good night!";
+    }
+    console.log(greeting); 
+
+    var greetingElement = document.getElementById("greeting");
+    if (greetingElement != null) {
+        greetingElement.innerHTML = greeting + " I am Emma Kim";
+    }
+}
+greetingFunc();
+
+
 
 
 
