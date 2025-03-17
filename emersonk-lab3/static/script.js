@@ -75,12 +75,3 @@ function greetingFunc() {
 }
 greetingFunc();
 
-
-
-
-
-
-var student = {name:"Emma", age: 19};
-console.log(student.name);
-document.getElementById("id").innerHTML = "hi" + student.name + "!";
-//hi3
