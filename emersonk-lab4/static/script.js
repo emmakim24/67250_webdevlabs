@@ -85,6 +85,27 @@ function addYear(){
 }
 addYear();
 
+function showList() {
+    var list = document.getElementById("funList");
+    var button = document.getElementById("showButton");
+
+    list.style.display = "block"; 
+    button.style.display = "none";
+}
+
+//read more and read less
+$("#readMore").click(function() {
+    $("#intro2").show();  
+    $("#readMore").hide(); 
+    $("#readLess").show(); 
+});
+$("#readLess").click(function() {
+    $("#intro2").hide(); 
+    $("#readMore").show();  
+    $("#readLess").hide();  
+});
+
+
 //checks form validity
 function validateForm(event) {
     let valid = true;
