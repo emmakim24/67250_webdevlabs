@@ -143,7 +143,10 @@ function validateForm(event) {
     }
 }
 
-document.getElementById("contactForm").onsubmit = validateForm;
+const form = document.getElementById("contactForm");
+if (form) {
+    form.onsubmit = validateForm;
+}
 
 function getAdvice(){
     fetch("https://api.adviceslip.com/advice")
