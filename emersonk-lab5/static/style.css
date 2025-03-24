@@ -42,9 +42,9 @@ img {
     height: auto;
 }
 
-#funList {
+/*#funList {
     display: none;
-}
+}*/
 
 #intro2{
     display: none;
@@ -58,4 +58,42 @@ img {
 #readMore{
     background-color: pink;
 }
+
+.funIMG {
+    width: 100%;
+    height: auto;
+    border-radius: 100%; 
+    border: 3px solid #ff73cf; /* Optional: Adds a colored border */
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+.container {
+    background-color: pink;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    display: inline-block;
+}
+
+.mainLayout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;   
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px; 
+}
+.item1, .item2, .item3, .item4 {
+    flex: 1 1 calc(50% - 30px);
+    max-width: 500px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;    
+  }
 

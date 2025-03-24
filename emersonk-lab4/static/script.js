@@ -85,12 +85,14 @@ function addYear(){
 }
 addYear();
 
+//show fun list
 function showList() {
     var list = document.getElementById("funList");
     var button = document.getElementById("showButton");
 
     list.style.display = "block"; 
     button.style.display = "none";
+    
 }
 
 //read more and read less

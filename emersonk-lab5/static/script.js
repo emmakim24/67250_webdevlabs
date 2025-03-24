@@ -85,13 +85,27 @@ function addYear(){
 }
 addYear();
 
-function showList() {
+//show fun list
+/*function showList() {
     var list = document.getElementById("funList");
     var button = document.getElementById("showButton");
 
     list.style.display = "block"; 
     button.style.display = "none";
-}
+}*/
+
+//read more and read less
+$("#readMore").click(function() {
+    $("#intro2").show();  
+    $("#readMore").hide(); 
+    $("#readLess").show(); 
+});
+$("#readLess").click(function() {
+    $("#intro2").hide(); 
+    $("#readMore").show();  
+    $("#readLess").hide();  
+});
+
 
 //checks form validity
 function validateForm(event) {
@@ -130,3 +144,16 @@ function validateForm(event) {
 }
 
 document.getElementById("contactForm").onsubmit = validateForm;
+
+function getAdvice(){
+    fetch("https://api.adviceslip.com/advice")
+    .then(response => response.json())
+    .then(data => {
+      const advice = data.slip.advice;
+      document.getElementById("adviceText").innerText = advice;
+    })
+    .catch(error => {
+        console.error("Error fetching advice:", error);
+        document.getElementById("adviceText").innerText = "Oops! Couldn't fetch advice. Try again later.";
+    });
+}
