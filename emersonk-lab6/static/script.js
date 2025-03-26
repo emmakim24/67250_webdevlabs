@@ -88,6 +88,7 @@ function getAdvice(){
     });
 }
 
+//read more read less buttons
 $("#readMore").click(function () {
     $("#moreBio").show();
     $("#readMore").hide();
@@ -99,14 +100,44 @@ $("#readLess").click(function () {
     $("#readLess").hide();
 });
 
+//toggle menu
 document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.getElementById("menu-toggle");
+    const toggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
 
-    if (toggleBtn && navLinks) {
-        toggleBtn.addEventListener("click", function () {
+    if (toggle && navLinks) {
+        toggle.addEventListener("click", function () {
             navLinks.classList.toggle("show");
         });
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname.split("/").pop(); // gets filename 
+    const navLinks = document.querySelectorAll("nav a");
+  
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute("href").split("/").pop();
+      if (linkPath === currentPath) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+//   console.log(window.location);
+
+//   listItems = [document.getElementsByTagName('li')];
+//   links = [document.getElementsByTagName('a')];
+  
+//   links.forEach(
+//       function () {
+//           console.log(links);
+//       }
+//   );
+//   links.forEach(element => {
+//       element.addclasslist;
+      
+//   });
+  
+//   console.log(listItems);
+//   console.log(links);

@@ -8,10 +8,25 @@
     padding: 5px;
     margin: 5px;
 }
+@keyframes fadeZoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+}
 header {
     grid-area: header;
     background-color: #ff73cf;
-}nav {
+    animation: fadeZoomIn 1s ease-out forwards;
+}  
+header h1 {
+    animation: fadeZoomIn 1s ease-out forwards;
+}
+nav {
     grid-area: nav;
     background-color: #f1f1f1;
     padding: 10px 0;
@@ -21,6 +36,11 @@ nav a {
     margin-right: 15px;
     color: #000047;
     flex-flow: row wrap;
+}
+nav a.active {
+    background-color: #ffc0e9;
+    border-radius: 10px;
+    font-weight: bold;
 }
 section {
     grid-area: section;
