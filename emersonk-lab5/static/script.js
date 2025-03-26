@@ -160,3 +160,26 @@ function getAdvice(){
         document.getElementById("adviceText").innerText = "Oops! Couldn't fetch advice. Try again later.";
     });
 }
+
+console.log(window.location);
+
+listItems = [document.getElementsByTagName('li')];
+links = [document.getElementsByTagName('a')];
+
+links.forEach(
+    function () {
+        console.log(links);
+    }
+);
+links.forEach(element => {
+    element.addclasslist;
+    
+});
+
+console.log(listItems);
+console.log(links);
+
+
+
+
+

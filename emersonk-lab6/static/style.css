@@ -1,0 +1,250 @@
+* {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    color: #000047;
+    font-weight: 250;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    padding: 5px;
+    margin: 5px;
+}
+header {
+    grid-area: header;
+    background-color: #ff73cf;
+}nav {
+    grid-area: nav;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+}
+nav a {
+    text-decoration: none;
+    margin-right: 15px;
+    color: #000047;
+    flex-flow: row wrap;
+}
+section {
+    grid-area: section;
+    background-color: #ffc0e9;
+}
+footer {
+    grid-area: footer;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+
+.home-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    'header header'
+    'nav nav'
+    'section section'
+    'figure main'
+    'footer footer';
+}
+.home-container figure {
+    grid-area: figure;
+    background-color: #ffebf3;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-container figure img {
+    width: 85%;
+    height: auto;
+    display: block;
+}
+#readLess, #readMore{
+    background-color: #ebfbff;       
+    border: 2px solid #000047;     
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+}
+#readLess{
+    display: none;
+}
+#moreBio{
+    display: none;
+}
+.home-container main {
+    grid-area: main;
+    background-color: #d7f7ff;
+
+}
+
+
+.resume-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    'header header'
+    'nav nav'
+    'section section'
+    'main main'
+    'bottom-content bottom-content'
+    'footer footer';
+}
+th {
+    padding:12px;
+    background-color: #A8EDFF;
+    color: #0A1036;
+    width: fit-content;
+}
+tr:nth-child(odd) {
+    background-color: #ffc6dd;
+    color: #0A1036;
+
+}
+tr:nth-child(even) {
+    background-color: #ffebf3;
+    color: #0A1036;
+
+}
+.resume-container summary {
+    grid-area: bottom-content;
+    background-color: #a8edff;
+    text-align: center;
+    padding: 10px;
+}
+.resume-container main {
+    grid-area: main;
+    background-color: #d7f7ff;
+}
+
+
+.fun-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "nav"
+    "section";
+}
+.fun-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;   
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px; 
+}
+.item1, .item2, .item3, .item4 {
+    flex: 1 1 calc(50% - 30px);
+    max-width: 500px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;    
+}
+.funIMG {
+    width: 100%;
+    height: auto;
+    border-radius: 100%; 
+    border: 3px solid #ff73cf; /* Optional: Adds a colored border */
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'nav nav'
+    'section section'
+    'figure table'
+    'main main'
+    'footer footer';
+}
+.contact-container figure {
+    grid-area: figure;
+    background-color: #ffebf3;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-container table {
+    grid-area: table;
+    background-color: #d7f7ff;
+
+}
+.contact-container main {
+    grid-area: main;
+    background-color: #a8edff;
+    align-items: center;
+}
+form * {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000047;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 650px) {
+    .home-container,
+    .resume-container,
+    .fun-container,
+    .contact-container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "nav"
+        "section"
+        "figure"
+        "main"
+        "table"
+        "form"
+        "bottom-content"
+        "footer";
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f1f1f1;
+    }
+
+    #nav-links a {
+        padding: 10px;
+        border-top: 1px solid #ccc;
+    }
+
+    #nav-links.show {
+        display: flex;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--j query link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!--Roboto Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/097fa6dcc6.js" crossorigin="anonymous"></script>
+
+    <!--Link to Style Sheet-->
+    <link rel="stylesheet" href="../static/style.css">
+
+    <!--Link to js-->
+    <script defer src="../static/script.js"></script>
+
+    <!--Meta-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Emerson Kim">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Emerson Kim professional website">
+    <title>Emma Kim</title>
+</head>
+<body onload="addYear()">
+    <div class="contact-container">
+        <header>
+            <h1>Emerson Kim</h1>
+        </header>
+
+        <nav>
+            <i class="fas fa-bars" id="menu-toggle"></i>
+            <div id="nav-links">
+                <a href="../index.html">About Me</a>
+                <a href="cv.html">Resume</a>
+                <a href="fun.html">More!</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+
+        <section>
+            <h2>Contact Me</h2>
+        </section>
+
+        <figure>
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1212.5590297282956!2d-79.9411794101477!3d40.44302764076802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f21f3f590bed%3A0x9d419801b7b38e8c!2sCMU%20Soccer%20Field!5e0!3m2!1sen!2sus!4v1742777375931!5m2!1sen!2sus" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </figure>
+
+        <table>
+            <tr>
+                <th>Contact Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td>206-606-3191</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>emersongkim@gmail.com</td>
+            </tr>
+        </table>
+
+        <main>
+            <form id="contactForm" action="/action_page.php" method="get">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <span class="error-message" id="nameError"></span><br><br>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <span class="error-message" id="emailError"></span><br><br>
+    
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" required></textarea>
+                <span class="error-message" id="commentError"></span><br><br>
+    
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+
+        <footer>
+            <p id="copyYear">Copyright Emma Kim. All rights reserved. &copy;</p>
+        </footer>
+    </div>
+</body>
+</html>
+
