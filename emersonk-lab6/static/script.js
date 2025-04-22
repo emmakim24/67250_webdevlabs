@@ -32,8 +32,6 @@ function addYear(){
 addYear();
 
 
-
-
 //checks form validity
 function validateForm(event) {
     let valid = true;
@@ -112,32 +110,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const currentPath = window.location.pathname.split("/").pop(); // gets filename 
-    const navLinks = document.querySelectorAll("nav a");
-  
-    navLinks.forEach(link => {
-      const linkPath = link.getAttribute("href").split("/").pop();
-      if (linkPath === currentPath) {
-        link.classList.add("active");
-      }
-    });
-  });
 
-//   console.log(window.location);
+//highlights what page is active
+console.log(window.location.pathname);
+const links = document.querySelectorAll('nav a');
+links.forEach(
+    element => {
+        if (element.href.includes(window.location.pathname)){
+            element.classList.add('active');
+        }
+    }
+)
 
-//   listItems = [document.getElementsByTagName('li')];
-//   links = [document.getElementsByTagName('a')];
-  
-//   links.forEach(
-//       function () {
-//           console.log(links);
-//       }
-//   );
-//   links.forEach(element => {
-//       element.addclasslist;
-      
-//   });
-  
-//   console.log(listItems);
-//   console.log(links);
